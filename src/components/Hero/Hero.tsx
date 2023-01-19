@@ -11,6 +11,8 @@ import {
     IconProps,
 } from '@chakra-ui/react';
 import Image from 'next/image';
+import Link from 'next/link';
+
 
 export default function Hero() {
     return (
@@ -30,24 +32,29 @@ export default function Hero() {
                     </Text>
                 </Heading>
                 <Text color={'gray.500'} maxW={'3xl'}>
-                    Kalkulator zapotrzebowania kalorycznego pozwala dokładnie określić potrzebną liczbę kalorii dziennie. 
-                    Prosty w użyciu, wystarczy podać kilka danych osobowych i poziomie aktywności fizycznej. 
+                    Kalkulator zapotrzebowania kalorycznego pozwala dokładnie określić potrzebną liczbę kalorii dziennie.
+                    Prosty w użyciu, wystarczy podać kilka danych osobowych i poziomie aktywności fizycznej.
                     Skorzystaj z niego aby lepiej planować dietę i osiągnąć swój cel związany z wagą.
                 </Text>
                 <Stack direction={'row'} wrap="wrap" justifyContent={"center"} gap={2}>
                     <a href="#form">
-                    <Button
-                        rounded={'full'}
-                        px={6}
-                        colorScheme={'orange'}
-                        bg={'orange.400'}
-                        _hover={{ bg: 'orange.500' }}>
-                        Wypróbuj już teraz
-                    </Button>
+                        <Button
+                            rounded={'full'}
+                            px={6}
+                            colorScheme={'orange'}
+                            bg={'orange.400'}
+                            _hover={{ bg: 'orange.500' }}
+                        >
+                            Wypróbuj już teraz
+                        </Button>
                     </a>
-                    <Button rounded={'full'} px={6}>
-                        Dowiedz się więcej
-                    </Button>
+                    <Link href={'info'} scroll={false} >
+
+                        <Button rounded={'full'} px={6}>
+                            Dowiedz się więcej
+                        </Button>
+
+                    </Link>
                 </Stack>
                 <Flex w={'full'} position="relative" maxH={"lg"} h={'full'} minH="lg" >
                     <Image src="/icons/FitnessIcon.svg" alt="" fill />
@@ -55,6 +62,6 @@ export default function Hero() {
                     {/* <FitnessIcon /> */}
                 </Flex>
             </Stack>
-        </Container>
+        </Container >
     );
 }
