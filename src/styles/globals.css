@@ -1,49 +1,45 @@
-
-
 html,
 body {
 	max-width: 100vw;
 	overflow-x: hidden;
 }
-html{
+html {
 	scroll-behavior: smooth;
 }
-
-
 
 /* width */
 ::-webkit-scrollbar {
 	width: 8px;
 }
-  
-  /* Track */
+
+/* Track */
 ::-webkit-scrollbar-track {
 	background: rgb(250, 245, 245);
-	
 }
-  
-  /* Handle */
+
+/* Handle */
 ::-webkit-scrollbar-thumb {
 	border-radius: 8px;
-	background: #ED8936;
+	background: #ed8936;
 }
-  
-  /* Handle on hover */
+
+/* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
 	background: #d3772b;
 }
 
 .card {
-	/* font-size: 164px;
-	width: 300px;
-	height: 430px; */
 	display: flex;
 	align-items: center;
 	justify-content: center;
 	background: white;
 	border-radius: 20px;
-	box-shadow: 0 0 1px hsl(0deg 0% 0% / 0.075), 0 0 2px hsl(0deg 0% 0% / 0.075), 0 0 4px hsl(0deg 0% 0% / 0.075),
-		0 0 8px hsl(0deg 0% 0% / 0.075), 0 0 16px hsl(0deg 0% 0% / 0.075);
+	box-shadow:
+		0 0 1px hsl(0deg 0% 0% / 0.075),
+		0 0 2px hsl(0deg 0% 0% / 0.075),
+		0 0 4px hsl(0deg 0% 0% / 0.075),
+		0 0 8px hsl(0deg 0% 0% / 0.075),
+		0 0 16px hsl(0deg 0% 0% / 0.075);
 	transform-origin: 10% 60%;
 }
 
