@@ -1,6 +1,8 @@
 import type { AppProps } from "next/app";
 import { ChakraProvider } from "@chakra-ui/react";
 import { AnimatePresence } from "framer-motion";
+import { Analytics } from "@vercel/analytics/react";
+
 import "@/styles/globals.css";
 
 const App = ({ Component, pageProps, router }: AppProps) => (
@@ -14,9 +16,9 @@ const App = ({ Component, pageProps, router }: AppProps) => (
 				{...pageProps}
 				key={router.asPath}
 			/>
+			<Analytics />
 		</ChakraProvider>
 	</AnimatePresence>
 );
 
 export default App;
-
